@@ -10,13 +10,20 @@ class App extends Component {
    // this.addTodo = this.addTodo.bind(this);
     this.state={
       todos:[
-            ]
+        {
+              id:"",
+              title:"",
+              description:"",
+              doDate:"",
+              isComplete:false
+        }
+      ]
     }
 
   }
 
   addTodo (newTask){
-  console.log("estado en console log: "+this.state)
+  console.log("estado en console log: "+{...this.state})
    if(newTask){
 
 
@@ -24,7 +31,7 @@ class App extends Component {
               id:"",
               title:newTask.title,
               description:newTask.descripcion,
-              doDate:newTask.todoDate,
+              doDate:newTask.todoDate.toString(),
               isComplete:false
       }
             
@@ -44,15 +51,7 @@ class App extends Component {
 
    console.log("newtask: "+newTask)
 
-
-  
-
-
-
-
-    
     //console.log("desde ADDTODO APP Cargaste: ", newTask)
-
 
   }
 

@@ -65,6 +65,8 @@ class TodoInput extends React.Component {
     /*Send New Input*/
     sendNewTask(){
 
+        console.log("new task: "+this.state.newTaskTitle+"new description: "+this.state.newTaskDescription+"new description: "+this.state.newTasktodoDate)
+
       let newTask = {
           title:this.state.newTaskTitle,
           descripcion:this.state.newTaskDescription,
@@ -102,9 +104,7 @@ class TodoInput extends React.Component {
             </div>
             <div>
                  <button onClick={this.sendNewTask}>Add Task</button>
-            </div>
-           
-            
+            </div>         
         </div>
     );
   }

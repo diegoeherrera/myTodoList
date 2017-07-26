@@ -1,10 +1,31 @@
 import React from 'react'
 
- const TodoRenderTask = ({tasks}) => {
-    
+
+
+ const TodoRenderTask = ({data}) => {
+
     return (
-        <h2>Render Task</h2>
-    )
+
+          <div>
+                {
+                    data.map( task=>{
+
+                        return(
+                                    <li>
+                                       <h2>{task.title}</h2>
+                                       <h2>{task.description}</h2>
+                                       <h2>{task.doDate}</h2>
+                                       
+                                    </li>  
+                            )
+                        }
+                    )
+                }
+
+          </div>
+      )
 }
+
+
 
 export default TodoRenderTask
